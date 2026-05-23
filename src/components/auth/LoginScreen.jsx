@@ -55,7 +55,18 @@ export const LoginScreen = () => {
             required
             className="input-field"
           />
-          <Button type="submit" style={{ width: '100%', justifyContent: 'center', marginTop: '16px' }} disabled={loading}>
+          <Button
+            type="submit"
+            style={{
+              width: '100%',
+              justifyContent: 'center',
+              marginTop: '16px',
+              backgroundColor: '#6EE0EB',
+              color: '#1A1A1A',
+              boxShadow: '0 4px 14px rgba(110, 224, 235, 0.45)',
+            }}
+            disabled={loading}
+          >
             {loading ? 'Cargando...' : (isSignUp ? 'Crear cuenta' : 'Iniciar sesión')}
           </Button>
           
@@ -87,13 +98,14 @@ export const LoginScreen = () => {
 
         .login-header h1 {
           font-size: 2rem;
-          font-weight: 600;
+          font-weight: 700;
           margin-bottom: 8px;
-          color: var(--text-primary);
+          color: #ffffff;
+          text-shadow: 0 2px 12px rgba(0,0,0,0.2);
         }
 
         .login-header p {
-          color: var(--text-secondary);
+          color: rgba(255,255,255,0.75);
           margin-bottom: 32px;
           font-size: 0.95rem;
           line-height: 1.5;
@@ -109,17 +121,21 @@ export const LoginScreen = () => {
         .input-field {
           padding: 14px 16px;
           border-radius: 12px;
-          border: 1px solid var(--border-color);
-          background: var(--bg-primary);
-          color: var(--text-primary);
+          border: 1px solid rgba(255,255,255,0.35);
+          background: rgba(255,255,255,0.15);
+          color: #ffffff;
           font-size: 1rem;
           outline: none;
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
 
+        .input-field::placeholder {
+          color: rgba(255,255,255,0.5);
+        }
+
         .input-field:focus {
-          border-color: var(--text-primary);
-          box-shadow: 0 0 0 2px var(--mood-none);
+          border-color: #6EE0EB;
+          box-shadow: 0 0 0 2px rgba(110,224,235,0.25);
         }
 
         .toggle-mode {
@@ -128,11 +144,11 @@ export const LoginScreen = () => {
           gap: 8px;
           margin-top: 24px;
           font-size: 0.9rem;
-          color: var(--text-secondary);
+          color: rgba(255,255,255,0.65);
         }
 
         .text-btn {
-          color: var(--text-primary);
+          color: #6EE0EB;
           font-weight: 600;
         }
 

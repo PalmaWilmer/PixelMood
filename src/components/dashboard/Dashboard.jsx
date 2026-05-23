@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext';
 import { getEntries, upsertEntry } from '../../services/api';
 import { PixelGrid } from './PixelGrid';
 import { DailyEntryForm } from './DailyEntryForm';
+import { NotesHistory } from './NotesHistory';
 import { ExportBadge } from '../export/ExportBadge';
 import { LogOut, Share2 } from 'lucide-react';
 import { Button } from '../common/Button';
@@ -72,6 +73,10 @@ export const Dashboard = () => {
         <div className="form-section">
           <DailyEntryForm onSave={handleSaveEntry} initialEntry={todayEntry} />
         </div>
+
+        <div className="notes-section fade-in">
+          <NotesHistory entries={entries} />
+        </div>
       </main>
 
       <ExportBadge 
@@ -117,7 +122,16 @@ export const Dashboard = () => {
         .grid-section h2 {
           font-size: 1.25rem;
           margin-bottom: 16px;
-          color: var(--text-secondary);
+          color: rgba(255,255,255,0.8);
+        }
+
+        .form-section {
+          margin-bottom: 32px;
+        }
+
+        .notes-section {
+          margin-top: 8px;
+          margin-bottom: 48px;
         }
 
         .loading-state {
