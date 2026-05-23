@@ -1,0 +1,71 @@
+:root {
+  /* Warm Journal Theme - Light Mode */
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F0EBE1;
+  --text-primary: #3C3530;
+  --text-secondary: #70655B;
+  
+  --accent-gold: #D4AF37;
+  --accent-indigo: #4B5A8F;
+  --border-color: rgba(60, 53, 48, 0.1);
+
+  /* Mood Colors */
+  --mood-rad: #F4D068;   /* Yellow Gold */
+  --mood-happy: #9EBC9F; /* Sage Green */
+  --mood-meh: #C5C3C6;   /* Lavender Gray */
+  --mood-sad: #8FA89B;   /* Rain Blue */
+  --mood-bad: #DB9A87;   /* Old Rose */
+
+  --mood-none: rgba(60, 53, 48, 0.05);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(250, 248, 245, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(60, 53, 48, 0.07);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Warm Journal Theme - Dark Mode */
+    --bg-primary: #1E1E24;
+    --bg-secondary: #2A2A32;
+    --text-primary: #E2DDD9;
+    --text-secondary: #A09995;
+    
+    --border-color: rgba(226, 221, 217, 0.1);
+    --mood-none: rgba(226, 221, 217, 0.05);
+
+    /* Glassmorphism Dark */
+    --glass-bg: rgba(30, 30, 36, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Base utility variables for easier access */
+.theme-dark {
+  --bg-primary: #1E1E24;
+  --bg-secondary: #2A2A32;
+  --text-primary: #E2DDD9;
+  --text-secondary: #A09995;
+  --border-color: rgba(226, 221, 217, 0.1);
+  --mood-none: rgba(226, 221, 217, 0.05);
+  --glass-bg: rgba(30, 30, 36, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.theme-light {
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F0EBE1;
+  --text-primary: #3C3530;
+  --text-secondary: #70655B;
+  --border-color: rgba(60, 53, 48, 0.1);
+  --mood-none: rgba(60, 53, 48, 0.05);
+  --glass-bg: rgba(250, 248, 245, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-shadow: 0 8px 32px 0 rgba(60, 53, 48, 0.07);
+}
