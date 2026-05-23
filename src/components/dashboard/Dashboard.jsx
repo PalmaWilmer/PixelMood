@@ -55,7 +55,7 @@ export const Dashboard = () => {
         </div>
         <div className="header-right">
           <Button variant="secondary" onClick={() => setShowExport(true)}>
-            <Share2 size={16} /> Exportar
+            <Share2 size={16} /> Mi año
           </Button>
           <button className="logout-btn" onClick={signOut} title="Cerrar sesión">
             <LogOut size={20} />
@@ -106,12 +106,12 @@ export const Dashboard = () => {
         }
 
         .logout-btn {
-          color: var(--text-secondary);
+          color: rgba(255,255,255,0.7);
           transition: color 0.2s ease;
         }
 
         .logout-btn:hover {
-          color: var(--mood-bad);
+          color: #fff;
         }
 
         .grid-section h2 {

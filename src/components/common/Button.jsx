@@ -15,14 +15,16 @@ export const Button = ({ children, variant = 'primary', className = '', ...props
 
   const variants = {
     primary: {
-      backgroundColor: 'var(--text-primary)',
-      color: 'var(--bg-primary)',
-      boxShadow: '0 4px 14px rgba(0,0,0,0.1)',
+      backgroundColor: 'var(--accent-button)',
+      color: '#1A1A1A',
+      boxShadow: '0 4px 14px rgba(110, 224, 235, 0.35)',
+      fontWeight: '600',
     },
     secondary: {
-      backgroundColor: 'transparent',
-      color: 'var(--text-primary)',
-      border: '1px solid var(--border-color)',
+      backgroundColor: 'rgba(255,255,255,0.15)',
+      color: '#ffffff',
+      border: '1px solid rgba(255,255,255,0.35)',
+      backdropFilter: 'blur(8px)',
     },
     danger: {
       backgroundColor: 'var(--mood-bad)',

@@ -1,13 +1,14 @@
 :root {
   /* Default to Light Mode */
-  --bg-primary: #FAF8F5;
-  --bg-secondary: #F0EBE1;
+  --bg-primary: #C664E8;
+  --bg-secondary: #b84fd0;
   --text-primary: #1A1A1A; /* Letras más oscuras para mayor contraste */
-  --text-secondary: #4A4A4A;
+  --text-secondary: #3d003d;
   
   --accent-gold: #D4AF37;
   --accent-indigo: #4B5A8F;
-  --border-color: rgba(0, 0, 0, 0.15);
+  --accent-button: #6EE0EB;
+  --border-color: rgba(255, 255, 255, 0.3);
 
   /* Mood Colors */
   --mood-rad: #F4D068;
@@ -16,12 +17,12 @@
   --mood-sad: #8FA89B;
   --mood-bad: #DB9A87;
 
-  --mood-none: rgba(0, 0, 0, 0.05);
+  --mood-none: rgba(255, 255, 255, 0.15);
 
   /* Glassmorphism */
-  --glass-bg: rgba(250, 248, 245, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(180, 80, 210, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(100, 0, 150, 0.25);
 
   /* Typography */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
@@ -29,16 +30,17 @@
 
 :root.dark {
   /* Dark Mode */
-  --bg-primary: #121212; /* Fondo más oscuro */
-  --bg-secondary: #1E1E1E;
-  --text-primary: #FFFFFF; /* Texto completamente blanco para máximo contraste */
-  --text-secondary: #B3B3B3;
+  --bg-primary: #C664E8;
+  --bg-secondary: #9940c0;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.75);
   
-  --border-color: rgba(255, 255, 255, 0.15);
-  --mood-none: rgba(255, 255, 255, 0.05);
+  --accent-button: #6EE0EB;
+  --border-color: rgba(255, 255, 255, 0.25);
+  --mood-none: rgba(255, 255, 255, 0.1);
 
   /* Glassmorphism Dark */
-  --glass-bg: rgba(30, 30, 30, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(120, 30, 160, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
