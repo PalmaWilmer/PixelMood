@@ -38,7 +38,7 @@ export const Dashboard = () => {
       });
     } catch (err) {
       console.error('Error saving entry:', err);
-      alert('Hubo un error al guardar tu reflexión.');
+      alert('Hubo un error al guardar tu reflexión: ' + err.message + '\n\nAsegúrate de haber creado la tabla "entries" en tu base de datos Supabase ejecutando el script proporcionado.');
     }
   };
 
