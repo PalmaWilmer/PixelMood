@@ -39,17 +39,17 @@ export const LoginScreen = () => {
         {error && <div className="error-message">{error}</div>}
 
         <form onSubmit={handleSubmit} className="email-form">
-          <input 
-            type="email" 
-            placeholder="Tu correo electrónico" 
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
             className="input-field"
           />
-          <input 
-            type="password" 
-            placeholder="Contraseña" 
+          <input
+            type="password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -69,7 +69,7 @@ export const LoginScreen = () => {
           >
             {loading ? 'Cargando...' : (isSignUp ? 'Crear cuenta' : 'Iniciar sesión')}
           </Button>
-          
+
           <div className="toggle-mode">
             <span>{isSignUp ? '¿Ya tienes cuenta?' : '¿No tienes cuenta?'}</span>
             <button type="button" onClick={() => setIsSignUp(!isSignUp)} className="text-btn">

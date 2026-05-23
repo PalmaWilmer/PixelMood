@@ -3,7 +3,7 @@ import React from 'react';
 export const Button = ({ children, variant = 'primary', className = '', ...props }) => {
   const baseStyles = {
     padding: '10px 20px',
-    borderRadius: '50px',
+    borderRadius: '12px',
     fontWeight: '500',
     fontSize: '0.95rem',
     transition: 'all 0.2s ease',
