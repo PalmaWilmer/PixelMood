@@ -57,14 +57,7 @@ export const LoginScreen = () => {
           />
           <Button
             type="submit"
-            style={{
-              width: '100%',
-              justifyContent: 'center',
-              marginTop: '16px',
-              backgroundColor: '#6EE0EB',
-              color: '#1A1A1A',
-              boxShadow: '0 4px 14px rgba(110, 224, 235, 0.45)',
-            }}
+            style={{ width: '100%', marginTop: '16px' }}
             disabled={loading}
           >
             {loading ? 'Cargando...' : (isSignUp ? 'Crear cuenta' : 'Iniciar sesión')}
@@ -86,7 +79,6 @@ export const LoginScreen = () => {
           align-items: center;
           justify-content: center;
           padding: 20px;
-          background: radial-gradient(circle at 50% -20%, var(--bg-secondary) 0%, var(--bg-primary) 100%);
         }
 
         .login-card {

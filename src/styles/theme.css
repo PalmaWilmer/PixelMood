@@ -1,14 +1,19 @@
 :root {
-  /* Default to Light Mode */
-  --bg-primary: #C664E8;
-  --bg-secondary: #b84fd0;
-  --text-primary: #1A1A1A; /* Letras más oscuras para mayor contraste */
-  --text-secondary: #3d003d;
+  /* Light Mode Multi-color Palette */
+  --bg-grad-1: #e0c3fc;
+  --bg-grad-2: #8ec5fc;
+  --bg-grad-3: #e0c3fc;
   
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  
+  --button-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-text: #ffffff;
+  --button-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+
   --accent-gold: #D4AF37;
   --accent-indigo: #4B5A8F;
-  --accent-button: #6EE0EB;
-  --border-color: rgba(255, 255, 255, 0.3);
+  --border-color: rgba(255, 255, 255, 0.5);
 
   /* Mood Colors */
   --mood-rad: #F4D068;
@@ -19,24 +24,29 @@
 
   --mood-none: rgba(255, 255, 255, 0.15);
 
-  /* Glassmorphism */
-  --glass-bg: rgba(180, 80, 210, 0.45);
-  --glass-border: rgba(255, 255, 255, 0.25);
-  --glass-shadow: 0 8px 32px 0 rgba(100, 0, 150, 0.25);
+  /* Glassmorphism Light */
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
 
   /* Typography */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 :root.dark {
-  /* Dark Mode */
-  --bg-primary: #C664E8;
-  --bg-secondary: #9940c0;
-  --text-primary: #FFFFFF;
+  /* Dark Mode Multi-color Palette */
+  --bg-grad-1: #0f2027;
+  --bg-grad-2: #203a43;
+  --bg-grad-3: #2c5364;
+
+  --text-primary: #F7FAFC;
   --text-secondary: rgba(255, 255, 255, 0.75);
   
-  --accent-button: #6EE0EB;
-  --border-color: rgba(255, 255, 255, 0.25);
+  --button-bg: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  --button-text: #ffffff;
+  --button-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+
+  --border-color: rgba(255, 255, 255, 0.2);
   --mood-none: rgba(255, 255, 255, 0.1);
 
   /* Glassmorphism Dark */

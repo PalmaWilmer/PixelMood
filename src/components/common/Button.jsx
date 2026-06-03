@@ -1,24 +1,24 @@
 import React from 'react';
 
-export const Button = ({ children, variant = 'primary', className = '', ...props }) => {
+export const Button = ({ children, variant = 'primary', className = '', style = {}, ...props }) => {
   const baseStyles = {
-    padding: '10px 20px',
-    borderRadius: '12px',
-    fontWeight: '500',
-    fontSize: '0.95rem',
-    transition: 'all 0.2s ease',
+    padding: '12px 24px',
+    borderRadius: '9999px', // Ovalado (pill shape)
+    fontWeight: '600',
+    fontSize: '1rem',
+    transition: 'all 0.3s ease',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: '8px',
+    border: 'none',
   };
 
   const variants = {
     primary: {
-      backgroundColor: 'var(--accent-button)',
-      color: '#1A1A1A',
-      boxShadow: '0 4px 14px rgba(110, 224, 235, 0.35)',
-      fontWeight: '600',
+      background: 'var(--button-bg)',
+      color: 'var(--button-text)',
+      boxShadow: 'var(--button-shadow)',
     },
     secondary: {
       backgroundColor: 'rgba(255,255,255,0.15)',
@@ -36,17 +36,26 @@ export const Button = ({ children, variant = 'primary', className = '', ...props
 
   return (
     <button
-      style={{ ...baseStyles, ...getVariantStyles() }}
+      style={{ ...baseStyles, ...getVariantStyles(), ...style }}
       className={`${className} hover-scale`}
       {...props}
     >
       <style>{`
-        .hover-scale:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        .hover-scale {
+          cursor: pointer;
         }
-        .hover-scale:active {
+        .hover-scale:hover:not(:disabled) {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+        .hover-scale:active:not(:disabled) {
           transform: translateY(0);
+        }
+        .hover-scale:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none;
+          filter: grayscale(0.5);
         }
       `}</style>
       {children}
